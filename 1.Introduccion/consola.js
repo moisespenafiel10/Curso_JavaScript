@@ -7,7 +7,7 @@ console.info("mensaje informativo")
 
 // mostra un mensaje de estilo alerta
 
-console.war("mensaje de tipo alerta")
+console.warn("mensaje de tipo alerta")
 
 // mostrar un mensaje de estilo o tipo error
 
@@ -15,7 +15,7 @@ console.error("mesaje de error")
 
 // mewnsaje por consola de gestion de tiempo
 
-console.time("gestion");
+/*console.time("gestion");
 
 let edad = 18;
 if (edad >= 18) {
@@ -24,4 +24,16 @@ if (edad >= 18) {
     console.warn("Eres pulpin");
 }
 
-console.timeEnd("gestion");
+console.timeEnd("gestion");*/
+
+// mesajes tipo tabla
+console.table("es un clavo")
+
+const languajes = [
+    { nombre: "javascript", extension: ".js" },
+    { nombre: "python", extension: ".py" },
+    { nombre: "php", extension: ".php" }
+]
+console.log(languajes)
+console.table(languajes)
+

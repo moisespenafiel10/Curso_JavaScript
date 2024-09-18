@@ -66,3 +66,11 @@ if (edad >=18){
 }
 ```
 #### 3. Tablas
+este tipo de mensaje por consola nos muestra la informacion en una tablas solo formateara a los datos `array` y `objetos`
+```js
+lenguages=[
+   (nombre:"javascript",extencion:".js");
+   (nombre:"python",extencion:".py");
+   (nombre:"php",extencion:".php")
+]
+```
