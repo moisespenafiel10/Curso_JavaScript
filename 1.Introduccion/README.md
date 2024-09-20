@@ -7,6 +7,8 @@
       - [1. Notificadores](#1-notificadores)
       - [2. Gestion de timepo](#2-gestion-de-timepo)
       - [3. Tablas](#3-tablas)
+  - [naiming](#naiming)
+  - [usos correctos](#usos-correctos)
   
 ## Comentarios
 Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el interprete de `js`.
@@ -74,3 +76,37 @@ lenguages=[
    (nombre:"php",extencion:".php")
 ]
 ```
+[para ver los ejemplos haz clic aqui](consola.js)
+
+## naiming 
+es la tecnica para nombrar variables, funciones y clas dentro de un lenguaje de programacion.
+Las variasbles tienen reglas muy especificas que debemos seguir a la hora de designar sus nombres 
+
+>-Devemos de usar nombres que especifiquen que aporta esa variable a nuestro codigo no se pueden usar espacios
+
+>[!WARNING]
+>```js
+>con espacios = 16
+>```
+   evitar simbolos y (`snake_case`)
+>[!WARNING]
+>```js
+>#incorrecto
+>demo$=45
+>
+>#incorrecto
+>con_guiones_abajo=13
+>```
+
+
+## usos correctos
+- debemos usar nombres que expliquen que aporta esa variable a nuestro codigo
+- -usar (`camelCase`)
+  
+
+
+  >[!TIP]
+  >```js
+  >#correcto
+  >edadAlumno = 16
+  >```
