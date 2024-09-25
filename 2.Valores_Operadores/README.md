@@ -28,7 +28,7 @@ los valores de tipo numero como es de esperar son numeros y en javascript se hsc
   .0
   ```
 
-- hnumeros notacion cientifica
+- numeros notacion cientifica
   
     ```js
     2998e8
@@ -40,6 +40,28 @@ los valores de tipo numero como es de esperar son numeros y en javascript se hsc
   >[!TIP]
   cuando javascript hace trabajo de memoria(cuando crea un patron de bit para almacenar) todos numero se almacena como decimal positivo.
 
+  - numeros especiales 
+En javascript existen tres valores de tipo numero que se consideran un dato primitivo numerico de tipo especial
+```js
+infinity
+- infinity // negativo
+NaN // not a number
+// cuando el resultado de una operacion es matematicamente imposible.
+```
+#### aritmwtica 
+la principal operacion que se puede hacer con numeros es la aritmetica.
+
+para esto tenemos los operadores aritmeticos como,
+- suma (+).
+- resta(-).
+- Multiplicaion(*).
+- divisiion (/).
+- potencia (**)
+- modulo (%).
+
+**podemos agrupar operadociones con parentecis () las operaciones que esten entre los parentecis se ejecutaran primero**
+
+precedencia -> es el que ordena en que orden se tiene que ejecutar cada operador 
 
 - valores (datos)
 - tipos (tipos de datos)
