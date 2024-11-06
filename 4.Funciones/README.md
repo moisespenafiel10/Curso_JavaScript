@@ -1,5 +1,7 @@
 # INDICE
+
 - [INDICE](#indice)
+
 - [FUNCIONES](#funciones)
   - [Estructura de una funcion (como se crea una funcion)](#estructura-de-una-funcion-como-se-crea-una-funcion)
   - [Tipos de Argumentos y Parametros](#tipos-de-argumentos-y-parametros)
@@ -12,17 +14,22 @@
     - [Diferencias](#diferencias)
     - [bingding](#bingding)
   - [la pila de llamadas (call stack)](#la-pila-de-llamadas-call-stack)
+
 # FUNCIONES
 Las funciones en javascript son `bloques de codigo ejecutable`, a los que podemos pasar parametros y operar con ellos.
 Nos sirve para modular (modularizar) nuestro programa y estructurarlos en bloques que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
 Las funciones normalmente, al acabar su ejecucion `devuelven un valor`, que conseguimos con el parametro `return`.
 
 ## Estructura de una funcion (como se crea una funcion)
+
 para crear una funcion debemos realizar los siguientes pasos:
+
 1. hacer uso del keyword `function`.
 2. darle normbre a la funcion
 3. crear los parametros que recibira entre parentesis `()`.
+
 4. crear el cuerpo de la funcion `{}`.
+
 ```js
 //funcion sin parametros, lleva parentesis igual
 function miFuncion(){
@@ -36,10 +43,12 @@ function miFuncionParametros(texto){
 function funcionVariosParametros(a,b,c){
     console.log(a + b + c)
 }
+
 ```
 **¿como ejecutamos una funcion**
 Para ejecutar una funcion debemos ahcer el llaamdo de la misma, haciendo uso unicamente de su nombre y los parametros que recibira.
 ```js
+
 //crear funcion
 function saludo(){
     console.log("hola")
@@ -52,11 +61,16 @@ dunction salu2(texto){
 }
 //ejecutar
 salu2("jory")
+
 ```
+
 > [!NOTE]
 > ** Reglas para poner el nombre a una funcion** -
+
 Los nombres de las funciones deben representar acciones por lo que deben construirse usando el `verbo` que representa la accion seguido de un `sustantivo` representara a la entidad.
+
 ```js
+
 function crearUsuario(){
 }
 function enviarCorreo(){
@@ -186,3 +200,51 @@ function comer() {
 }
 comer()
  ```
+ ## CLOSURE o Funciones de cierre (Funciones que retorna funciones)
+
+Un CLOSURE es una funcion que encapsula una serie de variables y definiciones locales que unicamente seran accesibles si son devueltas con el keyword `return`.
+Antes de que aparezca la version `ecma 6` los `closure` eran un patron creacional que nos permitia modularizar nuestro codigo, en lugar de usar las `clases` que eran populares en otros lenguajes pero que javascript aun no lo implementaba.
+
+```js
+//una funcion que retorna otra funcion, por lo general es una funcion anonima
+//funcion clasica
+function retornaValor(n){
+    return n+1
+}
+//llamando funcion clasica
+retornaValor(10)
+//funcion closure
+function retornaValor(n){
+    return function(){
+        return n+1
+    }
+}
+//llamando funcion closure
+retornaValor(10)()
+```
+
+>[!NOTE]
+>Las funciones `closure` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre por cada llamada que se le realice.
+
+### tipo clases
+
+son funciones cuyo uso son iguales a las clases dentro de la ejecucion de una clase tenemos lo que se llama conmo `instancia` en javascript tenemos funciones clousure que se oueden instanciar nal igual que una clase la diferencia con las funciones closure clasicas es que em esta hacemos uso de la palabra resrnada ´keyword´ llama ´this´
+```js
+function  contador (){
+    this.contador=0
+    this.incre=function(){
+        this.contador++
+    }
+    this.decre)function(){
+        this.contador--
+    }
+}
+```
+
+>[!NOTE]
+>Las funciones `closure` de tipo clase no hace uso de return en sus funciones al hacer uso de `this` cada funcion o variable estara enlazado al objeto que se cree
+
+>[!WARNING]
+>EL PROBLEMA DE ESTE TIPO DE FUNCION, ES CUANDO creamos un nuevo objeto a partir de la funcion tipo clase, reservara espancion en memoria para toda la clase y su valor creado , eso quiere decir variable y funciones ,cada vez que llamamos a una funcion este se replica en memoria
+
+## prototype (tarea >averiguar y sus eejemplos)
