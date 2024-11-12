@@ -19,36 +19,71 @@
 
 // ejersicio cear una funcion que tenga o almacene una variable contador y podamos con funciones realisar la suma mas uno de esta variable y la resta mas uno de la misma variable a demas de poder tener una funcion que me permita acceder al valor actuada y poder mostrarlo 
 
-function contador(){
-    let contador = 0;
-    
-    function incremento(){
-        return contador++
-    }
-    function decremento(){
-        return contador--
-    }
-    function valorContador(){
-        console.log(contador)
-    }
-    return {
-        valorContador,
-        incremento,
-        decremento,
-    }
+// function contador(){
+//     let contador = 0;
+
+//     function incremento(){
+//         return contador++
+//     }
+//     function decremento(){
+//         return contador--
+//     }
+//     function valorContador(){
+//         console.log(contador)
+//     }
+//     return {
+//         valorContador,
+//         incremento,
+//         decremento,
+//     }
+// }
+
+// let count1 = contador()
+// for (let i = 0; i < 5; i++){
+//     count1.incremento()
+// }
+// count1.valorContador()
+
+// let count2 = contador()
+// for (let i = 0; i < 5; i++){
+//     count2.decremento()
+// }
+// count2.valorContador()
+
+function Contador(nombre) {
+    this.count = 0;
+    this.nombre = nombre;
 }
 
-let count1 = contador()
-for (let i = 0; i < 5; i++){
-    count1.incremento()
-}
-count1.valorContador()
+Contador.prototype = {
+    incremento: function () {
+        this.count++;
+    },
+    decremento: function () {
+        this.count--;
+    },
+    mostrarDatos: function () {
+        return `${this.count}\n${this.nombre}`;
+    },
+    actualizarNombre: function (nuevoNombre) {
+        this.nombre = nuevoNombre;
+    }
+};
 
-let count2 = contador()
-for (let i = 0; i < 5; i++){
-    count2.decremento()
-}
-count2.valorContador()
+// Instanciar el contador
+let contadorUno = new Contador("el primo");
+console.log(contadorUno.mostrarDatos());  // Muestra: "0\nel primo"
+contadorUno.incremento();
+contadorUno.incremento();
+console.log(contadorUno.mostrarDatos());  // Muestra: "2\nel primo"
+
+// Actualizar el nombre
+contadorUno.actualizarNombre("primucha");
+console.log(contadorUno.mostrarDatos());  // Muestra: "2\nel primo actualizado"
+
+contadorUno.incremento();
+contadorUno.incremento();
+console.log(contadorUno.mostrarDatos());  // Muestra: "4\nel primo actualizado"
 
 //let contador=0
 //function invremento
