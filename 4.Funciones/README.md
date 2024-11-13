@@ -297,7 +297,42 @@ Contador:prototype={
 > Es una convencion usar como nombre nuestra  funcion principal, 1. que debe ser singular, 2. que es PalcalCase
 >
 ## RECURSION EN FUNCIONES (Tareas)
+Las funciones recursivas en JavaScript son aquellas que se llaman a sí mismas dentro de su propia definición. Este tipo de funciones es útil para resolver problemas que pueden dividirse en subproblemas más pequeños del mismo tipo.
+```js
+function factorial(n) {
+  // Caso base: si n es 0, el factorial es 1
+  if (n === 0) {
+    return 1;
+  }
+  // Caso recursivo: n * factorial de (n-1)
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // Salida: 120
+
+// En este ejemplo, la función factorial se llama a sí misma con un valor decreciente de n hasta que n es 0, momento en el cual se detiene la recursión.
+```
+> [!NOTE]
+> 1. **Caso base:** La condición que detiene la recursión. Sin un caso base, la función se llamaría indefinidamente, causando un desbordamiento de pila.
+> 2. **Caso recursivo:** La parte de la función que se llama a sí misma con un argumento modificado, acercándose al caso base.
+>
 ## FUNCIONES CALLBACKS (Tareas)
+Una función callback es aquella que es pasada como argumento a otra función para que sea "llamada de nuevo" (call back) en un momento posterior. Una función que acepta otras funciones como argumentos es llamada función de orden-superior (High-Order), y contiene la lógica para determinar cuándo se ejecuta la función callback. 
+
+```js
+function sumar(a, b, callback) {
+    let resultado = a + b;
+    callback(resultado);  // Llamamos a la función callback con el resultado
+}
+
+function mostrarResultado(resultado) {
+    console.log("El resultado es:", resultado);
+}
+
+// Llamamos a la función sumar y le pasamos mostrarResultado como callback
+sumar(3, 4, mostrarResultado);  // "El resultado es: 7"
+
+```
 
 # CLASES 
 las clases en javaascript llegan en la version `ECMAscript 6`, javascript no tenia al igual que otros lenguajes de programacio orientada a objetos las `clases` ya qu js se enfocaba en la `programacion funcional` sin embargo con la llegada con `ES6` javascript adopta ser un lenguage de programacion multiparadigma, entre ellos la `programacion orientada a objetos` con la llegada de las `clases`
