@@ -315,9 +315,9 @@ console.log(factorial(5)); // Salida: 120
 > [!NOTE]
 > 1. **Caso base:** La condición que detiene la recursión. Sin un caso base, la función se llamaría indefinidamente, causando un desbordamiento de pila.
 > 2. **Caso recursivo:** La parte de la función que se llama a sí misma con un argumento modificado, acercándose al caso base.
->
+
 ## FUNCIONES CALLBACKS (Tareas)
-Una función callback es aquella que es pasada como argumento a otra función para que sea "llamada de nuevo" (call back) en un momento posterior. Una función que acepta otras funciones como argumentos es llamada función de orden-superior (High-Order), y contiene la lógica para determinar cuándo se ejecuta la función callback. 
+Una función callback es aquella que es pasada como argumento a otra función para que sea `llamada de nuevo` (call back) en un momento posterior. Una función que acepta otras funciones como argumentos es llamada función de orden-superior (High-Order), y contiene la lógica para determinar cuándo se ejecuta la función callback. 
 
 ```js
 function sumar(a, b, callback) {

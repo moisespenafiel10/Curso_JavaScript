@@ -1,13 +1,25 @@
-# estructura de datos 
-## Indice
-- [Array](#lista-o-array)
-  
-aparte de los tipos de datos primitivos jvascript mos proporciona los tipso de datos completos conocido tambien como datos estructurados o estructura de datos. para poder tabjar con estos tipos de datos deberemos conocer la forma de representarlos en la meoria de nuestra maquina javascript trabaa con 2 tipos de datos estruccturados que trabajan de manera independiente o en conjunto. son los siguientes 
+# Indice
+- [Indice](#indice)
+- [Estructura de datos](#estructura-de-datos)
+  - [Lista o Array](#lista-o-array)
+    - [Creacion](#creacion)
+    - [Acceder a un elemnto del array](#acceder-a-un-elemnto-del-array)
+    - [Metodos](#metodos)
+  - [Objetos](#objetos)
+    - [Creacion](#creacion-1)
+    - [Acceder a un elemnto del objeto](#acceder-a-un-elemnto-del-objeto)
+    - [Metodos](#metodos-1)
+# Estructura de datos
+A parte de los tipos de datos primitivos javascript nos proporciona los tipos de datos complejos conocido tambien como datos estructurados o estructura de datos.
+Para poder trabajar con estos tipos de datos, deberemos conocer la forma de representarlos en la memoria de nuestra maquina.
+Javascript trabaja con dos tipos de datos estructurados que trabajan de manera independiendte o en conjunto.
+Son los siguientes
 ## Lista o Array
-### creacion
-### acceder a un elemento del array
-### metodos
-## objetos
-### creacion
-### acceder a un elemnto del objeto
-### metodos 
+### Creacion
+### Acceder a un elemnto del array
+### Metodos
+
+## Objetos
+### Creacion
+### Acceder a un elemnto del objeto
+### Metodos
