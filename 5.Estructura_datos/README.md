@@ -111,14 +111,27 @@ los metodos son funciones que nos permiten crear,actualizar y eliminar los eleme
     console.log(numeros.toString()); // Output: "1,2,3"
     ```
   - **shift() / unshift()** Añade o elimina elementos al inicio del array.
-    ```js
+    ```js 
     const numeros = [2, 3];
     numeros.unshift(1); // Añade 1 al inicio
     numeros.shift();    // Elimina el primer elemento
     console.log(numeros); // Output: [3]
     ```
+  - **split()** en JavaScript divide una cadena en un array de substrings (subcadenas) utilizando un separador especificado. Es muy útil para manipular cadenas de texto.
+    ```js
+    const texto = "manzana,banana,pera";
+    const frutas = texto.split(",");
+    console.log(frutas); // Output: ["manzana", "banana", "pera"]
+    ```
 
 ## Objetos
+los objetos son tipos de datos estructurados similares a las listas, para acceder a un elemento de la ista javascript les asignabaindices, en este caso los objetos como unica diferencia de las lista nosotros podemos asignar el nombre del elemnto al cual deseamos acceder  a esto se le conoce como `clave:valor`
+cada clave:valor es un elemento de un objeto si deseamos crear mas elementos tendremos que separarlo por comas
 ### Creacion
+para crear un objeto debemos encerrar los elementos en `{}` cada elemento estara conformado por su clave valor `clave:valor` 
+```js
+let datosJory={nombre:"jory",apellido:"Rodriguez Camargo",edad:"20",ganado:["el primo","los chamos"],direccion:{tipoCalle:"pasaje",nombreCalle:"querobamba",numeroVivienda:222,numeroCuarto:5}}
+```
+
 ### Acceder a un elemnto del objeto
 ### Metodos
